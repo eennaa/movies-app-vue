@@ -1,5 +1,7 @@
 <template>
   <div>
+    <nav-bar/>
+    
     lalallalala i can't hear you
     
     <movie-row v-for="movie in movies" :key="movie.id" :movie="movie" > </movie-row>
@@ -8,12 +10,14 @@
 </template>
 
 <script>
+  import NavBar from '../components/NavBar.vue'
   import { movies } from '../services/MoviesService.js'
   import MovieRow from '../components/MovieRow.vue'
 
   export default {
     components: {
-      MovieRow
+      MovieRow,
+      NavBar
     },
 
     data() {
