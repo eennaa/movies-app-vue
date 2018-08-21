@@ -1,18 +1,19 @@
 <template>
   <div>
     lalallalala i can't hear you
-    <list-movies :movies="movies" > </list-movies>
+    
+    <movie-row v-for="movie in movies" :key="movie.id" :movie="movie" > </movie-row>
   </div>
 
 </template>
 
 <script>
   import { movies } from '../services/MoviesService.js'
-  import ListMovies from '../components/ListMovies.vue'
+  import MovieRow from '../components/MovieRow.vue'
 
   export default {
     components: {
-      ListMovies
+      MovieRow
     },
 
     data() {
